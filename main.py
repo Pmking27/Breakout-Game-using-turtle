@@ -7,7 +7,7 @@ import winsound
 score_no = 0
 FONT = ("Courier", 24, "normal")
 winsound.PlaySound(
-    "E:\my #100dayscodewithpython\Day 86 - Breakeout Game using Turtle [Game]\music\slow-trap.wav", winsound.SND_ASYNC | winsound.SND_LOOP | winsound.SND_FILENAME)
+    "music\slow-trap.wav", winsound.SND_ASYNC | winsound.SND_LOOP | winsound.SND_FILENAME) #If this is not working then copy and paste full path of slow-trap.wav
 
 screen = turtle.Screen()
 screen.setup(600, 670)
@@ -17,7 +17,7 @@ screen.tracer(0)
 screen.listen()
 
 img = tkinter.Image(
-    "photo", file="E:\my #100dayscodewithpython\Day 86 - Breakeout Game using Turtle [Game]\logo.png")
+    "photo", file="logo.png") #If this is not working then copy and paste full path of logo.png
 turtle._Screen._root.iconphoto(True, img)
 
 paddle = turtle.Turtle(shape="square")
@@ -119,7 +119,7 @@ while game_continue:
         ball.goto(0, 0)
         ball.write("Game Over.", align="center", font=FONT)
         winsound.PlaySound(
-            "E:\my #100dayscodewithpython\Day 86 - Breakeout Game using Turtle [Game]\music\mixkit-sad-game-over.wav", winsound.SND_ASYNC)
+            "music\mixkit-sad-game-over.wav", winsound.SND_ASYNC) #If this is not working then copy and paste full path of mixkit-sad-game-over.wav
         time.sleep(3)
         game_continue = False
 
